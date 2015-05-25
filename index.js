@@ -1,4 +1,5 @@
 var exec = require('child_process').exec;
+var spawn = require('child_process').spawn;
 
 var create = function() {
   return new gs();
@@ -29,6 +30,31 @@ gs.prototype.exec = function(callback) {
   exec('gs ' + args, function(err, stdout, stderr) {
     callback(err, stdout, stderr);
   });
+};
+
+gs.prototype.spawn = function(callback) {
+  var self = this;
+
+  if (!this._input) return callback("Please specify input");
+
+  this.options.push(this._input);
+
+  console.log(this.options);
+
+  var s = spawn('gs', this.options);
+
+  s.stdout.on('data', function(data) {
+    //console.log('stdout: ', data);
+  });
+
+  s.stderr.on('data', function(data) {
+    //console.log('stderr: ', data);
+  });
+
+  s.on('close', function(code) {
+    console.log('exited with code: ' + code);
+  });
+
 };
 
 gs.prototype.input = function(file) {

@@ -1,6 +1,6 @@
-# node-ghostscript
+# node-ghostscript-clone
 
-Wrapper for ghostscript in node.js.
+Wrapper for ghostscript in node.js - cloned from https://github.com/musubu/node-ghostscript
 
 ## Install
 
@@ -19,13 +19,7 @@ Wrapper for ghostscript in node.js.
       .output('./test-%d.jpg')
       .r(144)
       .jpegq(90)
-      .exec(function(err, stdout, stderr) {
-        if (!err) {
-          console.log(stdout);
-        } else {
-          console.log(err);
-        }
-      });
+      .spawn();
 
 ## API
 

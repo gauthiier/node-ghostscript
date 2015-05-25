@@ -1,14 +1,14 @@
 {
   "name": "ghostscript",
-  "version": "0.1.2",
-  "description": "Ghostscript wrapper",
+  "version": "0.1.3",
+  "description": "Ghostscript wrapper clone from https://github.com/musubu",
   "main": "index.js",
   "directories": {
     "test": "test"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/musubu/node-ghostscript.git"
+    "url": "https://github.com/gauthiier/node-ghostscript.git"
   },
   "keywords": [
     "ghostscript",
@@ -23,8 +23,7 @@
     "mocha": ">=1.7"
   },
   "author": {
-    "name": "Musubu Inc.",
-    "email": "dev@musubu.co.jp"
+    "name": "gauthiier",
   },
   "scripts": {
     "test": "make test"
