@@ -23,7 +23,7 @@
     "mocha": ">=1.7"
   },
   "author": {
-    "name": "gauthiier",
+    "name": "gauthiier"
   },
   "scripts": {
     "test": "make test"
